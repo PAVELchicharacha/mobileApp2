@@ -8,20 +8,26 @@
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
     tools:context=".MainActivity">
-
     <EditText
         android:id="@+id/editText"
-        android:layout_width="379dp"
-        android:layout_height="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="number"
         android:text="введите число"
         />
-
+    <EditText
+        android:id="@+id/editResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:inputType="number"
+        android:layout_below="@id/editText"
+        />
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="380dp"
-        android:layout_height="182dp"
-        android:layout_below="@id/editText">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editResult">
 
         <RadioButton
             android:id="@+id/radioButton8"

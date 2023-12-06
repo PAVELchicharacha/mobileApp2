@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         val TranslateButton =findViewById<Button>(R.id.button4)
 
         ExitButton.setOnClickListener{
-            finishAffinity()
+            finish()
         }
-        fun translate(view: View){
-            val transIntent= Intent(this,Translate::class.java)
+        TranslateButton.setOnClickListener {
+            val transIntent = Intent(this, Translate::class.java)
             startActivity(transIntent)
         }
     }

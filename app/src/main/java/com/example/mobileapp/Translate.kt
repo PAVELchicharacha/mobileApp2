@@ -22,6 +22,7 @@ class Translate : AppCompatActivity() {
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
         val buttonConvert = findViewById<Button>(R.id.buttonConvert)
 
+
         buttonConvert.setOnClickListener {
             val numberStr = editText.text.toString()
             val number = numberStr.toInt()
@@ -34,12 +35,9 @@ class Translate : AppCompatActivity() {
                 R.id.radioButton16 -> 16
                 else -> 10
             }
-            val result = when (selectedSystem) {
-                8 ->editResult.setText(Integer.toOctalString(number).toString())
-                10 -> editResult.setText(Integer.toString(number))
-                16 -> editResult.setText(Integer.toHexString(number))
-                else -> ""
-            }
+            var utils=Utilits()
+            editResult.setText(utils.ResultTest(selectedSystem,number))
         }
     }
+
 }
